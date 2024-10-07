@@ -69,7 +69,7 @@ contactForm.addEventListener('submit', (e) => {
 });
   // Cool typing effect for hero text
 const heroText = document.querySelector('.hero-text');
-const text = 'We build apps, <span class="pop">super fast ⚡</span>';
+const text = 'We build apps, <span class="pop">fast.</span>';
 
 heroText.innerHTML = ''; // Clear the text
 let i = 0;
