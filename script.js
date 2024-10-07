@@ -50,53 +50,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Contact form submission
-    const contactForm = document.getElementById('contact-form');
-    const confirmationMessage = document.getElementById('confirmation-message');
+// Contact form submission
+const contactForm = document.getElementById('contact-form');
+const confirmationMessage = document.getElementById('confirmation-message');
 
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    
+    // Simulate a successful submission
+    setTimeout(() => {
+        contactForm.style.display = 'none';
+        confirmationMessage.style.display = 'block';
         
-        // Simulate a successful submission
-        setTimeout(() => {
-            contactForm.style.display = 'none';
-            confirmationMessage.style.display = 'block';
-            
-            // Reset form after 5 seconds
-            setTimeout(() => {
-                contactForm.reset();
-                contactForm.style.display = 'block';
-                confirmationMessage.style.display = 'none';
-            }, 5000);
-        }, 1000);
-    });
+        // Remove the code that resets and shows the form again
+        // No more reset or form reappearance after submission
+    }, 1000);
+});
+  // Cool typing effect for hero text
+const heroText = document.querySelector('.hero-text');
+const text = 'We build apps, <span class="pop">super fast ⚡</span>';
 
-    // Cool typing effect for hero text
-    const heroText = document.querySelector('.hero-text');
-    const text = 'We build apps, <span class="pop">fast.</span>'; // Use innerHTML-friendly string
-    
-    heroText.innerHTML = ''; // Clear the text
-    let i = 0;
-    
-    function typeWriter() {
-        if (i < text.length) {
-            if (text.charAt(i) === '<') {
-                // Detect the full HTML tag and append it at once
-                const closeTagIndex = text.indexOf('>', i);
-                heroText.innerHTML += text.substring(i, closeTagIndex + 1);
-                i = closeTagIndex + 1;
-            } else {
-                heroText.innerHTML += text.charAt(i);
-                i++;
-            }
-            setTimeout(typeWriter, 50); // Adjust speed of typing if necessary
+heroText.innerHTML = ''; // Clear the text
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        if (text.charAt(i) === '<') {
+            // Detect the full HTML tag and append it at once
+            const closeTagIndex = text.indexOf('>', i);
+            heroText.innerHTML += text.substring(i, closeTagIndex + 1);
+            i = closeTagIndex + 1;
         } else {
-            // Make sure any remaining parts of the string are correctly rendered at the end
-            heroText.innerHTML = text;
+            heroText.innerHTML += text.charAt(i);
+            i++;
         }
+        setTimeout(typeWriter, 50); // Adjust speed of typing if necessary
+    } else {
+        // Make sure any remaining parts of the string are correctly rendered at the end
+        heroText.innerHTML = text;
     }
-    
-    typeWriter();
+}
+
+typeWriter();
+
     
     // Cool hover effect for service cards
     const serviceCards = document.querySelectorAll('.service-card');
