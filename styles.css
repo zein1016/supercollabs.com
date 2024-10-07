@@ -398,3 +398,44 @@ footer {
         margin-left: 0;
     }
 }
+
+/* Base styles for the logo */
+.logo h1 {
+    margin: 0;
+    font-family: 'Bungee', cursive; /* Assuming you're using Bungee font */
+    font-weight: normal;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.2rem; /* Adjust this value for mobile */
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .logo h1 {
+        font-size: 1.8rem; /* Adjust this value for desktop */
+    }
+}
+
+/* You might also want to adjust the overall header padding */
+header {
+    padding: 1rem;
+}
+
+@media (min-width: 769px) {
+    header {
+        padding: 1.5rem 2rem; /* More padding on desktop for better spacing */
+    }
+}
+
+.website {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+.website:hover {
+    background-color: var(--accent-color);
+}
