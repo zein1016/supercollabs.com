@@ -145,10 +145,30 @@
 
         <section id="contact">
             <h2 class="section-title">Contact Us</h2>
-            <form id="contact-form" action="https://script.google.com/macros/s/AKfycbyMKyqa9N7RyoFiaTSrQN2TlMItLvMtv7DkT0J8qUAfm90BemOKB11_8j2FVa3wuKrS/exec" method="POST">
+            <form id="contact-form" action="https://script.google.com/macros/s/AKfycbzrHWJLrIIz2FCkqa6LMtlTqvfUh8kkqxMz4mw8mA6sPvZihBHF-vuhcZ1hrZsb7zDG/exec" method="POST">
                 <input type="text" id="name" name="name" placeholder="Your name" required>
                 <input type="email" id="email" name="email" placeholder="Your email" required>
                 <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                
+                <!-- Emoji Question -->
+                <div class="emoji-question">
+                    <p>Which one is the rocket? 🚀</p>
+                    <div class="emoji-options">
+                        <label>
+                            <input type="radio" name="emoji_check" value="🚗" required>
+                            <span class="emoji-square">🚗</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="emoji_check" value="🚀">
+                            <span class="emoji-square">🚀</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="emoji_check" value="✈️">
+                            <span class="emoji-square">✈️</span>
+                        </label>
+                    </div>
+                </div>
+            
                 <button type="submit" class="submit-btn">Send</button>
             </form>
             <div id="confirmation-message" style="display: none;">

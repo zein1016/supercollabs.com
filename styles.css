@@ -439,3 +439,51 @@ header {
 .website:hover {
     background-color: var(--accent-color);
 }
+
+/* Container for the emoji question */
+.emoji-question {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* Style the question text */
+.emoji-question p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+/* Style the emoji options container */
+.emoji-options {
+    display: flex;
+    gap: 10px; /* Add space between the emoji options */
+}
+
+/* Hide the actual radio buttons */
+.emoji-options input[type="radio"] {
+    display: none;
+}
+
+/* Style the emoji squares */
+.emoji-square {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+/* Change border color and background on hover */
+.emoji-square:hover {
+    border-color: #007bff;
+    background-color: #e7f1ff;
+}
+
+/* Style selected emoji */
+.emoji-options input[type="radio"]:checked + .emoji-square {
+    border-color: #007bff;
+    background-color: #007bff;
+    color: white;
+}
